@@ -1,0 +1,151 @@
+* {
+    font-size: 13px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fafafa;
+}
+
+/* === Typography === */
+
+h3,
+.post__likes {
+    font-weight: 700;
+}
+
+/* === Layout === */
+
+header {
+    margin:0 0 1.538em;
+    padding: 0 1.538em;
+    border-bottom: 1px solid #C6C6C6;
+    background-color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 975px;
+    margin-inline: auto;
+}
+
+#logo {
+   width: 127px; 
+}
+
+#searchBar {
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    background-color: #efefef;
+    padding: 0 1.538em;
+    font-size: 16px;
+    background-image: url('images/magnifying-glass.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+}
+
+#searchBar:focus {
+    outline: none;
+    background-image: none;
+}
+
+@media (max-width: 460px) {
+    #searchBar {
+        display: none;
+    }
+}
+
+.avatar-img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    outline: 2px solid #fff;
+}
+
+.post {
+    max-width: 470px;
+    margin: 0 auto 1.2307em;
+    border: 1px solid #C6C6C6;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.post__top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.25em 1em;
+}
+
+.img-border {
+    position: relative;
+    z-index: 0;
+}
+
+.img-border::before {
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(45deg, #405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    display: block;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    z-index: -1;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -57%);
+}
+
+.user-name {
+    margin-bottom: 0;
+}
+
+.user-location {
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.post__bottom {
+    padding: 1.25em 1em 1em;
+}
+
+.post__content {
+    max-width: 100%;
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+}
+
+.icons-container img {
+    width: 25px;
+}
+
+button {
+    width: 33px;
+    height: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.not-liked {
+   background-image: url('images/heart.svg'); 
+}
+
+.liked {
+  background-image: url('images/heart-fill.svg');  
+}
